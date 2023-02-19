@@ -1,0 +1,49 @@
+-
+  const menuPages = [
+      {
+        id: 'key-square',
+        text: 'Dashboard',
+      },
+      {
+        id: 'square',
+        text: 'Product',
+      },
+      {
+        id: 'user-square',
+        text: 'Customers',
+      },
+      {
+        id: 'wallet-money',
+        text: 'Income',
+      },
+      {
+        id: 'discount-shape',
+        text: 'Promote',
+      },
+      {
+        id: 'message-question',
+        text: 'Help',
+      },
+  ]
+
+.menu 
+  <label for="nav-toggle" class="nav-toggle" onclick></label>
+  .menu__logo
+    h1.menu__title 
+      a(href='/') Dashboard
+      span.menu__title_version  v.01
+
+  nav.menu__nav
+    ul 
+      each value, index in menuPages
+        li
+          if index==0
+            div(class= 'menu__link '+value.id) #{value.text}
+          else 
+            div(class= 'menu__link menu__link_list '+value.id) #{value.text}
+  
+  .menu__profile 
+    a(href='/') 
+      div Evano 
+        span Project Manager
+          
